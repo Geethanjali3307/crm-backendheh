@@ -1,9 +1,10 @@
 
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const connection = async (userName,password) =>{
+const connection = async () =>{
 
-    const URL =`mongodb+srv://user11:user11@cluster0.i5zxo3y.mongodb.net/`
+    const URL =process.env.MONGODB_URI;g
     console.log("Database connected successfully");
     try {
 
